@@ -1,14 +1,8 @@
-import React from 'react';
-import TestComponent from './Pages/TestComponent';
+import React from "react";
+import Table from "./Pages/TestComponent";
 
-
-function App() {
+export default function App() {
   return (
-    <>
-    <TestComponent />
-    </>
+      <Table />
   );
 }
-
-export default App;
-
