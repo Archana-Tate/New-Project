@@ -1,11 +1,11 @@
 import React from 'react';
-import ClientComponent from '../src/Pages/clientComponent';
+import TestComponent from './Pages/TestComponent';
 
 
 function App() {
   return (
     <>
-    <ClientComponent />
+    <TestComponent />
     </>
   );
 }
