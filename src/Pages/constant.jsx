@@ -187,22 +187,9 @@ export const data1 = {
   h2: temp(clientData?.H1?.sub[1]),
 };
 
-let accId1 = clientData?.H2?.accountId;
-
-const temp1 = (H1) => {
-  if (H1.sub) {
-    accId1 = accId1 + "_" + H1.accountId;
-    H1.sub.map((element) => temp1(element));
-  } else {
-    accId1 = accId1 + "_" + H1.accountId;
-    return accId1;
-  }
-  return accId1;
-};
-
-const dataa = temp1(clientData?.H2?.sub[0]);
-
-accId1 = clientData?.H2?.accountId;
+accId = clientData?.H2?.accountId;
+const dataa = temp(clientData?.H2?.sub[0]);
+accId = clientData?.H2?.accountId;
 
 export const data2 = {
   label: clientData?.H2?.name,
@@ -210,6 +197,5 @@ export const data2 = {
   originalId: clientData?.H2?.accountId,
   children: clientData?.H2?.sub,
   h1: dataa,
-  h2: temp1(clientData?.H2?.sub[1]),
+  h2: temp(clientData?.H2?.sub[1]),
 };
-
