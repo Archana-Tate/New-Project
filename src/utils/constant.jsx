@@ -1,4 +1,4 @@
-export const tableData = [
+export const table = [
   {
     name: "Test1",
     h1: "603e0cd82ea0970012f4eda0_603e0cd82ea0970012f4eda1_603e0cd82ea0970012f4eda2_603e0cd82ea0970012f4eda3_603e0cd82ea0970012f4eda4",
@@ -161,41 +161,3 @@ export const clientData = {
   },
 };
 
-let accId = clientData?.H1?.accountId;
-
-const temp = (H1) => {
-  if (H1.sub) {
-    accId = accId + "_" + H1.accountId;
-    H1.sub.map((element) => temp(element));
-  } else {
-    accId = accId + "_" + H1.accountId;
-    return accId;
-  }
-  return accId;
-};
-
-const h1 = temp(clientData?.H1?.sub[0]);
-
-accId = clientData?.H1?.accountId;
-
-export const data1 = {
-  label: clientData?.H1?.name,
-  levelName: clientData?.H1?.levelName,
-  originalId: clientData?.H1?.accountId,
-  children: clientData?.H1?.sub,
-  h1: h1,
-  h2: temp(clientData?.H1?.sub[1]),
-};
-
-accId = clientData?.H2?.accountId;
-const dataa = temp(clientData?.H2?.sub[0]);
-accId = clientData?.H2?.accountId;
-
-export const data2 = {
-  label: clientData?.H2?.name,
-  levelName: clientData?.H2?.levelName,
-  originalId: clientData?.H2?.accountId,
-  children: clientData?.H2?.sub,
-  h1: dataa,
-  h2: temp(clientData?.H2?.sub[1]),
-};

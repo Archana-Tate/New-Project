@@ -1,8 +1,8 @@
 import React from "react";
-import Table from "./Pages/TestComponent";
+import TableComponent from "./Pages/TableComponent";
 
 export default function App() {
   return (
-      <Table />
+      <TableComponent />
   );
 }
